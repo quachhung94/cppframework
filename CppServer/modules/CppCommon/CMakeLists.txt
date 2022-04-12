@@ -18,7 +18,7 @@ if(DOXYGEN_FOUND)
 endif()
 
 # CMake module path
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../cmake")
 
 # Compiler features
 include(SetCompilerFeatures)
@@ -29,7 +29,7 @@ include(SystemInformation)
 # External packages
 find_package(Threads REQUIRED)
 if(UNIX AND NOT APPLE AND NOT MSYS)
-  find_package(LibBFD)
+  # find_package(LibBFD)
   find_package(LibDL)
   find_package(LibRT)
   find_package(LibUUID)
@@ -46,7 +46,7 @@ add_subdirectory("modules")
 # Link libraries
 list(APPEND LINKLIBS Threads::Threads)
 if(UNIX AND NOT APPLE AND NOT MSYS)
-  list(APPEND LINKLIBS ${LIBBFD_LIBRARIES})
+  # list(APPEND LINKLIBS ${LIBBFD_LIBRARIES})
   list(APPEND LINKLIBS ${LIBDL_LIBRARIES})
   list(APPEND LINKLIBS ${LIBRT_LIBRARIES})
   list(APPEND LINKLIBS ${LIBUUID_LIBRARIES})

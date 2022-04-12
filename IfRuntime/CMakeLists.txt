@@ -4,7 +4,7 @@ file(GLOB_RECURSE src_files LIST_DIRECTORIES false CONFIGURE_DEPENDS "*.cpp" "*.
 
 add_library(IFRuntime STATIC ${src_files})
 
-target_include_directories(IFRuntime PUBLIC "./include")
+target_include_directories(IFRuntime PUBLIC "./include" "${CMAKE_CURRENT_SOURCE_DIR}/../Logging/spdlog/include")
 
 target_link_libraries(IFRuntime
 PUBLIC cppserver)

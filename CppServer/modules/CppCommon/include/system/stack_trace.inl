@@ -6,6 +6,6 @@
     \copyright MIT License
 */
 
-#if defined(FMT_VERSION)
-template <> struct fmt::formatter<CppCommon::StackTrace> : ostream_formatter {};
-#endif
+// #if defined(FMT_VERSION)
+// template <> struct fmt::formatter<CppCommon::StackTrace> : ostream_formatter {};
+// #endif

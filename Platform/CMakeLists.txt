@@ -6,11 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 include(files.cmake)
 include(compiler.cmake)
 
-include_directories(SYSTEM "${CMAKE_CURRENT_LIST_DIR}/include" ${INCLUDE_DIRECTORIES} )
+include_directories(SYSTEM "${CMAKE_CURRENT_LIST_DIR}/include" ${INCLUDE_DIRECTORIES} "${CMAKE_CURRENT_SOURCE_DIR}/../../Logging/spdlog/include")
 
 
 add_library(${PROJECT_NAME} ${PLATFORM_SOURCES})
-target_link_libraries(${PROJECT_NAME} crypto sodium)
+target_link_libraries(${PROJECT_NAME} crypto sodium spdlog)
 set_compile_options(${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME} PUBLIC

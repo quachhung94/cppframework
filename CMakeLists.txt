@@ -10,9 +10,12 @@ include(SetCompilerWarnings)
 include(SetPlatformFeatures)
 include(SystemInformation)
 
+# include("CppCommon.cmake")
+
 # external
 find_package(OpenSSL REQUIRED)
 # module components
+add_subdirectory("./CppCommon")
 add_subdirectory("./CppServer")
 # components
 # add_subdirectory("./PlatformInterface")
@@ -25,3 +28,4 @@ add_subdirectory("./NetworkIf")
 add_subdirectory("./Platform")
 add_subdirectory("./Logging/spdlog")
 add_subdirectory("./App")
+add_subdirectory("./App2")

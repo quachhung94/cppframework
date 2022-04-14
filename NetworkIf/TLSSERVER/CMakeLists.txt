@@ -7,4 +7,4 @@ add_library(TLSSERVER STATIC ${src_files})
 target_include_directories(TLSSERVER PUBLIC "./include" "${CMAKE_CURRENT_SOURCE_DIR}/../../Logging/spdlog/include")
 
 target_link_libraries(TLSSERVER
-PUBLIC cppserver)
+PUBLIC cppserver cppcommon)

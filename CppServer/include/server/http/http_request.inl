@@ -6,9 +6,9 @@
     \copyright MIT License
 */
 
-#if defined(FMT_VERSION)
-template <> struct fmt::formatter<CppServer::HTTP::HTTPRequest> : ostream_formatter {};
-#endif
+// #if defined(FMT_VERSION)
+// template <> struct fmt::formatter<CppServer::HTTP::HTTPRequest> : ostream_formatter {};
+// #endif
 
 template <>
 struct std::hash<CppServer::HTTP::HTTPRequest>

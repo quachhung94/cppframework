@@ -1,0 +1,9 @@
+{
+    "name": "remote_basic",
+    "bypass_auth": false,
+    "bypass_rfid": false,
+    "nbr_of_gun": 2,
+    "mp_authen_list_dir": "/etc/remote-basic/mp_authen_list.json",
+    "env_file_dir" : "/udata/env.json",
+    "fw_info_dir" : "/etc/fw_info"
+}

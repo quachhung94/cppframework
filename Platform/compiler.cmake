@@ -3,7 +3,7 @@ function(set_compile_options target)
     target_compile_options(${target} PRIVATE $<$<COMPILE_LANGUAGE:CXX>: -Wnon-virtual-dtor>)
     target_compile_options(${target} PRIVATE
                                             -Werror 
-                                            -Wno-deprecated-declarations
+                                            # -Wno-deprecated-declarations
                                             -Wall 
                                             -Wextra
                                             -Wcast-align

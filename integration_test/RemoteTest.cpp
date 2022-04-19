@@ -158,6 +158,10 @@ void RemoteTest::event(const platform::core::timer::TimerExpiredEvent& event)
     else if (event.getId() == RM_FSM_NOTIFY_REPORT_TIMER_ID) {
         SPDLOG_INFO("NotifyReport Out/In: [{}]/[{}]", m_notifyReportOutCount, m_notifyReportInCount);
         // onNotifyReportRequest(1);
+
+        auto message  = std::make_shared<rb::AppItemData>(rb::AppItemData::kSysMsgOpModeChanged);
+        m_csQueue->push(message);
+
         std::random_device rd;
         std::default_random_engine eng(rd());
         std::uniform_int_distribution<int> distr(10, 15);
